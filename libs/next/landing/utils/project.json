@@ -1,0 +1,16 @@
+{
+  "name": "next/landing/utils",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/next/landing/utils/src",
+  "projectType": "library",
+  "tags": ["next-landing-utils"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/next/landing/utils/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  }
+}

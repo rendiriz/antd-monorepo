@@ -2,6 +2,7 @@ import './global.css';
 import cn from 'classnames';
 import { inter } from '@antd-monorepo/next/shared/utils';
 import { site } from '@antd-monorepo/next/landing/utils';
+import { Provider } from '@antd-monorepo/next/landing/components';
 
 export const metadata = {
   icons: {
@@ -20,7 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={cn([inter.variable])}>
-      <body>{children}</body>
+      <body>
+        <Provider>{children}</Provider>
+      </body>
     </html>
   );
 }

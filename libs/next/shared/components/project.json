@@ -6,7 +6,7 @@
   "tags": ["next-shared-components"],
   "targets": {
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/next/shared/components/**/*.{ts,tsx,js,jsx}"]

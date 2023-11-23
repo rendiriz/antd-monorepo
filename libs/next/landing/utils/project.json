@@ -6,7 +6,7 @@
   "tags": ["next-landing-utils"],
   "targets": {
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/next/landing/utils/**/*.{ts,tsx,js,jsx}"]

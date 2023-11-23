@@ -9,7 +9,11 @@ export default async function Index() {
       <div>
         <div className="text-blue-500">Test Landing Apps!</div>
         <div className="text-blue-500">Add = {testSharedUtils}</div>
-        <Button type="primary" block href="/with-sub-components">
+        <Button
+          type="primary"
+          block
+          href="/with-sub-components"
+        >
           With Sub Components
         </Button>
       </div>

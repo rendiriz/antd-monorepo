@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "*** Development ***": "",
-    "dev:landing": "nx serve landing"
+    "dev:web-apps": "nx serve web-apps"
   },
   "private": true,
   "dependencies": {

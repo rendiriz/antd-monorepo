@@ -1,17 +1,15 @@
 {
-  "name": "next/landing/components",
+  "name": "next/web-apps/utils",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/next/landing/components/src",
+  "sourceRoot": "libs/next/web-apps/utils/src",
   "projectType": "library",
-  "tags": ["next-landing-components"],
+  "tags": ["next-landing-utils"],
   "targets": {
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "libs/next/landing/components/**/*.{ts,tsx,js,jsx}"
-        ]
+        "lintFilePatterns": ["libs/next/web-apps/utils/**/*.{ts,tsx,js,jsx}"]
       }
     }
   }

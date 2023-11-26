@@ -1,22 +1,22 @@
 {
-  "name": "landing-e2e",
+  "name": "web-apps-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/landing-e2e/src",
+  "sourceRoot": "apps/web-apps-e2e/src",
   "targets": {
     "e2e": {
       "executor": "@nx/playwright:playwright",
-      "outputs": ["{workspaceRoot}/dist/.playwright/apps/landing-e2e"],
+      "outputs": ["{workspaceRoot}/dist/.playwright/apps/web-apps-e2e"],
       "options": {
-        "config": "apps/landing-e2e/playwright.config.ts"
+        "config": "apps/web-apps-e2e/playwright.config.ts"
       }
     },
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/landing-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["apps/web-apps-e2e/**/*.{js,ts}"]
       }
     }
   },
-  "implicitDependencies": ["landing"]
+  "implicitDependencies": ["web-apps"]
 }

@@ -1,7 +1,7 @@
 {
-  "name": "landing",
+  "name": "web-apps",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/landing",
+  "sourceRoot": "apps/web-apps",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,12 +9,12 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/landing",
-        "postcssConfig": "apps/landing/postcss.config.js"
+        "outputPath": "dist/apps/web-apps",
+        "postcssConfig": "apps/web-apps/postcss.config.js"
       },
       "configurations": {
         "development": {
-          "outputPath": "apps/landing"
+          "outputPath": "apps/web-apps"
         },
         "production": {}
       }
@@ -23,16 +23,16 @@
       "executor": "@nx/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "landing:build",
+        "buildTarget": "web-apps:build",
         "dev": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "landing:build:development",
+          "buildTarget": "web-apps:build:development",
           "dev": true
         },
         "production": {
-          "buildTarget": "landing:build:production",
+          "buildTarget": "web-apps:build:production",
           "dev": false
         }
       }
@@ -40,21 +40,21 @@
     "export": {
       "executor": "@nx/next:export",
       "options": {
-        "buildTarget": "landing:build:production"
+        "buildTarget": "web-apps:build:production"
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/landing/jest.config.ts"
+        "jestConfig": "apps/web-apps/jest.config.ts"
       }
     },
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/landing/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/web-apps/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },

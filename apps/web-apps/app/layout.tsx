@@ -1,8 +1,8 @@
 import './global.css';
 import cn from 'classnames';
 import { inter } from '@antd-monorepo/next/shared/utils';
-import { site } from '@antd-monorepo/next/landing/utils';
-import { Provider } from '@antd-monorepo/next/landing/components';
+import { site } from '@antd-monorepo/next/web-apps/utils';
+import { Provider } from '@antd-monorepo/next/web-apps/components';
 
 export const metadata = {
   icons: {
@@ -20,7 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={cn([inter.variable])}>
+    <html
+      lang="en"
+      className={cn([inter.variable])}
+    >
       <body>
         <Provider>{children}</Provider>
       </body>

@@ -25,7 +25,9 @@ export default function RootLayout({
       className={cn([inter.variable])}
     >
       <body>
-        <Provider>{children}</Provider>
+        <main className="bg-gray-200">
+          <Provider>{children}</Provider>
+        </main>
       </body>
     </html>
   );

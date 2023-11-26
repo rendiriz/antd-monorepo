@@ -23,7 +23,7 @@ module.exports = {
   plugins: [
     plugin(function ({ addBase, theme }) {
       addBase({
-        body: { fontFamily: theme('fontFamily.body') },
+        body: { fontFamily: theme('fontFamily.body'), margin: 0 },
       });
     }),
   ],

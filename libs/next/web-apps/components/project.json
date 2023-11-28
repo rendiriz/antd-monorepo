@@ -3,7 +3,7 @@
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/next/web-apps/components/src",
   "projectType": "library",
-  "tags": ["next-landing-components"],
+  "tags": ["next-web-apps-components"],
   "targets": {
     "lint": {
       "executor": "@nx/eslint:lint",

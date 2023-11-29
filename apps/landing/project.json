@@ -1,7 +1,7 @@
 {
-  "name": "web-apps",
+  "name": "landing",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/web-apps",
+  "sourceRoot": "apps/landing",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,12 +9,11 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/web-apps",
-        "postcssConfig": "apps/web-apps/postcss.config.js"
+        "outputPath": "dist/apps/landing"
       },
       "configurations": {
         "development": {
-          "outputPath": "apps/web-apps"
+          "outputPath": "apps/landing"
         },
         "production": {}
       }
@@ -23,16 +22,16 @@
       "executor": "@nx/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "web-apps:build",
+        "buildTarget": "landing:build",
         "dev": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "web-apps:build:development",
+          "buildTarget": "landing:build:development",
           "dev": true
         },
         "production": {
-          "buildTarget": "web-apps:build:production",
+          "buildTarget": "landing:build:production",
           "dev": false
         }
       }
@@ -40,23 +39,23 @@
     "export": {
       "executor": "@nx/next:export",
       "options": {
-        "buildTarget": "web-apps:build:production"
+        "buildTarget": "landing:build:production"
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/web-apps/jest.config.ts"
+        "jestConfig": "apps/landing/jest.config.ts"
       }
     },
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/web-apps/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/landing/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },
-  "tags": ["web-apps"]
+  "tags": ["landing"]
 }

@@ -1,0 +1,11 @@
+{
+  "LocaleLayout": {
+    "title": "next-intl example"
+  },
+  "IndexPage": {
+    "title": "Hello world!"
+  },
+  "TentangPage": {
+    "title": "About"
+  }
+}

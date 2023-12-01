@@ -23,5 +23,12 @@ export const StyledComponentsRegistry = ({
     );
   });
 
-  return <StyleProvider cache={cache}>{children}</StyleProvider>;
+  return (
+    <StyleProvider
+      cache={cache}
+      hashPriority="high"
+    >
+      {children}
+    </StyleProvider>
+  );
 };

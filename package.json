@@ -4,8 +4,9 @@
   "license": "MIT",
   "scripts": {
     "*** Development ***": "",
-    "dev:landing": "nx serve landing",
-    "dev:web-apps": "nx serve web-apps"
+    "dev:admin": "nx serve admin --port 3000",
+    "dev:landing": "nx serve landing --port 3001",
+    "dev:web-apps": "nx serve web-apps --port 3002"
   },
   "private": true,
   "dependencies": {
@@ -50,6 +51,7 @@
     "eslint": "~8.46.0",
     "eslint-config-next": "13.4.1",
     "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-cypress": "^2.13.4",
     "eslint-plugin-import": "2.27.5",
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-playwright": "^0.15.3",
